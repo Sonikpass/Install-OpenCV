@@ -44,7 +44,7 @@ if [ $? -eq 0 ]; then
 fi
 mkdir -p build
 cd build
-cmake 	-D BUILD_DOCS=NO -D OPENCV_EXTRA_MODULES_PATH=/home/ec2-user/opencv_contrib/opencv_contrib-3.1.0/modules -D CMAKE_BUILD_TYPE=RELEASE -D BUILD_TESTS=OFF -D BUILD_PERF_TESTS=OFF -D CMAKE_INSTALL_PREFIX=/usr/local ..
+cmake 	-D WITH_1394=OFF -D BUILD_DOCS=NO -D OPENCV_EXTRA_MODULES_PATH=/home/ec2-user/opencv_contrib/opencv_contrib-3.1.0/modules -D CMAKE_BUILD_TYPE=RELEASE -D BUILD_TESTS=OFF -D BUILD_PERF_TESTS=OFF -D CMAKE_INSTALL_PREFIX=/usr/local ..
 make -j 4
 sudo make install
 sudo sh -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
