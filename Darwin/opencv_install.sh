@@ -24,8 +24,8 @@ set -e
 
 echo "--- Installing OpenCV" $version
 
-echo "--- Installing Dependencies"
-source dependencies.sh
+#echo "--- Installing Dependencies"
+#source dependencies.sh
 
 echo "--- Downloading OpenCV" $version
 mkdir -p $dldir
