@@ -16,10 +16,10 @@ fi
 if [[ -z "$dldir" ]]; then
     dldir=OpenCV
 fi
-if ! sudo true; then
-    echo "You must have root privileges to run this script."
-    exit 1
-fi
+# if ! sudo true; then
+#     echo "You must have root privileges to run this script."
+#     exit 1
+# fi
 set -e
 
 echo "--- Installing OpenCV" $version
